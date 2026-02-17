@@ -7,7 +7,7 @@ export const StoreContext = createContext({});
 
 export const StoreContextProvider = ({ children }) => {
   const navigate = useNavigate();
-  const backendURL = "http://localhost:4000";
+  const backendURL = "https://job-portal-platform-backend-85pf.onrender.com";
 
   // ===== State =====
   const [JobsData, setJobsData] = useState([]);
