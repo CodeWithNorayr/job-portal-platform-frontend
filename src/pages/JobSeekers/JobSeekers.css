@@ -1,0 +1,139 @@
+.jobseekers-section-middle{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  color: rgb(93, 91, 90);
+  margin-top: 20px;
+}
+
+.jobseekers-section{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.jobseekerssection-cornel-img-h1-email{
+  font-family: "Pacifico", cursive;
+  font-size: 16px;
+  color: rgb(93, 91, 90);
+}
+
+.jobseekers-section-h1{
+  display: flex;
+  justify-content: center;
+  margin-left: 400px;
+  margin-right: 400px;
+  font-family: "Pacifico", cursive;
+  font-size: larger;
+  color: rgb(93, 91, 90);
+  margin-top: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.jobseekers-section-p{
+  cursor: pointer;
+  color: rgb(136, 129, 129);
+}
+
+.jobseekers-section-p:hover{
+  color: gray;
+}
+
+.jobseekerssection-cornel{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  color: rgb(93, 91, 90);
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.jobseekerssection-cornel-image{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 1.9px solid tomato;
+  border-radius: 100px;
+}
+
+.jobseekerssection-cornel-image:hover{
+  border: 2px solid tomato;
+}
+
+.jobseekerssection-cornel-img-h1{
+  font-family: "Pacifico", cursive;
+  font-size: 16px;
+  color: rgb(93, 91, 90);
+}
+
+.jobseekerssection-cornel-img-cvimage{
+  width: 30px;
+  height: 30px;
+}
+
+.jobseekerssection-cornel-img-cvimage:hover{
+  background-color: rgb(226, 223, 223);
+}
+
+.jobseekerssection-cornel-image-img{
+  justify-content: center;
+}
+
+@media (max-width:724px) {
+
+  .jobseekers-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .jobseekers-section-middle{
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr;
+    gap: 20px;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-size: 20px;
+    color: rgb(93, 91, 90);
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .jobseekers-section-p-email{
+    display: none;
+  }
+
+  .jobseekerssection-cornel-img-h1-email{
+    display: none;
+  }
+
+  .jobseekerssection-cornel{
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr;
+    gap: 20px;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-size: 20px;
+    color: rgb(93, 91, 90);
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .jobseekerssection-cornel-image{
+    width: 50px;
+    height: 50px;
+  }
+}

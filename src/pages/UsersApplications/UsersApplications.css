@@ -1,0 +1,57 @@
+.application-section-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  justify-content: center;
+  margin-top: 30px;
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+}
+
+.application-section-details-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.cvUploader-cs{
+  box-shadow: 0px 0px 2px 2px rgb(55, 2, 2);
+}
+
+.cvUploader-cs:hover{
+  box-shadow: 0px 0px 4px 4px rgb(42, 3, 3);
+}
+
+.application-section-details-image{
+  width: 300px;
+  height: 300px;
+  box-shadow: 0px 0px 2px 2px rgb(36, 3, 3);
+}
+
+.application-section-details-h333-h3{
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  color: rgb(0, 48, 48);
+}
+
+.application-section-details-image{
+  width: 300px;
+  height: 300px;
+  border: 0px solid tomato;
+  border-radius: 100px;
+}
+
+.application-section-details-image:hover{
+  background-color: rgb(102, 142, 142);
+  width: 302px;
+  height: 302px;
+}
+
+.cvUploader-cs{
+  width: 50px;
+  height: 50px;
+}

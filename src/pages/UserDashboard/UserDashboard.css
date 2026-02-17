@@ -1,0 +1,94 @@
+.userdashboard-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.userdashboard-section-profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: gray;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.userdashboard-section-profile-image-img {
+  width: 30px;
+  height: 10px;
+}
+
+.userdashboard-section-profile-h3 {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.userdashboard-section-profile-update {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: rgb(210, 210, 210);
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(152, 152, 152);
+}
+
+.userdashboard-section-profile-update:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.userdashboard-section-profile-update-image {
+  width: 60px;
+  height: 50px;
+}
+
+.userdashboard-section-profile-update-h3 {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(152, 152, 152);
+}
+
+.userdashboard-section-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: none;
+  height: 2px;
+}
+
+.userdashboard-section-h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+  cursor: pointer;
+  color: rgb(139, 137, 137);
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+@media (max-width:860px) {
+  .userdashboard-section-profile-update{
+    display: flex;
+    height: 80px;
+    font-family: "Pacifico", cursive;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(139, 137, 137);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .userdashboard-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

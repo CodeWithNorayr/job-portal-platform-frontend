@@ -1,0 +1,45 @@
+.recruiter-dashboard-section-images{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  line-height: 2px;
+}
+
+.recruiter-dashboard-section-image-img{
+  width: 30px;
+  height: 30px;
+}
+
+.recruiter-dashboard-section-h3{
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(27, 47, 71);
+}
+
+.recruiter-dashboard-section-title-h1{
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  color: rgb(46, 70, 82);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.recruiter-dashboard-section-title-container-full{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.recruiter-dashboard-section-images:hover{
+  background-color: rgb(232, 231, 231);
+}
+
+.recruiter-dashboard-section-title-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}

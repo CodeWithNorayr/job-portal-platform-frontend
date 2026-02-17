@@ -1,0 +1,64 @@
+.view-applications-page {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.view-applications-title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 26px;
+}
+
+.applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.application-card {
+  background: #f8f8f8;
+  padding: 15px 20px;
+  border-radius: 12px;
+  line-height: 1.6;
+  font-size: 15px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.resume-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.resume-file {
+  font-size: 13px;
+  color: gray;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 600px) {
+  .application-card {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .view-applications-title {
+    font-size: 20px;
+  }
+
+  .resume-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

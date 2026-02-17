@@ -1,0 +1,61 @@
+.manage-jobs-tabel-grid{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  text-align: center;
+  gap: 10px;
+  font-family: "Pacifico", cursive;
+  font-size: larger;
+  color: rgb(93, 91, 90);
+}
+
+.manage-jobs-tabel-grid-p{
+  cursor: pointer;
+}
+
+.assets-delete-icon{
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border: 0px solid blue;
+  border-radius: 20px;
+}
+
+.assets-delete-icon:hover{
+  background-color: rgb(209, 227, 222);
+}
+
+@media (max-width:850px) {
+  .manage-jobs-tabel-grid{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    text-align: center;
+    gap: 10px;
+    font-family: "Pacifico", cursive;
+    font-size: larger;
+    color: rgb(93, 91, 90);
+  }
+
+  .manage-jobs-tabel-grid-header-data{
+    display: none;
+  }
+
+  .manage-jobs-tabel-grid-header-location{
+    display: none;
+  }
+
+  .manage-jobs-tabel-grid-header-salary{
+    display: none;
+  }
+
+  .manage-jobs-tabel-grid-p-location{
+    display: none;
+  }
+
+  .manage-jobs-tabel-grid-salary{
+    display: none;
+  }
+
+  .manage-jobs-tabel-grid-date{
+    display: none;
+  }
+}

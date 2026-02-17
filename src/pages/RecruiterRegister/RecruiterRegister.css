@@ -1,0 +1,78 @@
+.company-register-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-size: larger;
+  color: rgb(93, 91, 90);
+}
+
+.company-register-image-imgtag{
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgb(67, 67, 71);
+  border-radius: 20px;
+}
+
+.company-register-image-imgtag:hover{
+  border: 1.8px solid grey;
+}
+
+.company-register-image-p{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.company-register-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-register-button-btn{
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  background-color: rgb(65, 213, 173);
+  margin-top: 20px;
+  border: 0px solid blue;
+  border-radius: 20px;
+  font-family: "Pacifico", cursive;
+  color: antiquewhite;
+  font-size: large;
+  font-weight: 500px;
+}
+
+.company-register-button-btn:hover{
+  background-color: rgb(88, 192, 192);
+}
+
+.company-register-name-input{
+  width: 260px;
+  height: 30px;
+  font-family: "Pacifico", cursive;
+  font-size: large;
+  color: rgb(93, 91, 90);
+}
+
+.company-register-email-input{
+  width: 260px;
+  height: 30px;
+  font-family: "Pacifico", cursive;
+  font-size: large;
+  color: rgb(93, 91, 90);
+}
+
+.company-register-password-input{
+  width: 260px;
+  height: 30px;
+  font-family: "Pacifico", cursive;
+  font-size: large;
+  color: rgb(93, 91, 90);
+}
+

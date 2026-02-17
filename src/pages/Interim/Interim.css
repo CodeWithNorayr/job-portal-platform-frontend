@@ -1,0 +1,26 @@
+.interim-images-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.interim-images-section-1{
+  width: 300px;
+  height: 300px;
+}
+
+.interim-images-section-1:hover{
+  width: 303px;
+  height: 303px;
+}
+
+.interim-images-section-2{
+  width: 300px;
+  height: 300px;
+}
+
+.interim-images-section-2:hover{
+  width: 303px;
+  height: 303px;
+}

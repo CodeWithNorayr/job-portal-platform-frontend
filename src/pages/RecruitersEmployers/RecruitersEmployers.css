@@ -1,0 +1,52 @@
+.companyDatas-full-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0px;
+  color: rgb(86, 86, 86);
+  font-family: "Pacifico", cursive;
+  font-size: larger;
+  line-height: 16px;
+  margin-top: 40px;
+}
+
+.companyDatas-full-section-image{
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgb(19, 19, 69);
+  border-radius: 100px;
+}
+
+.companyDatas-full-section-image:hover{
+  border: 2px solid rgb(16, 16, 62);
+}
+
+.companyDatas-full-section-h1-title{
+  color: rgb(9, 5, 45);
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+}
+
+@media (max-width:500px) {
+  .companyDatas-full-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0px;
+    color: rgb(86, 86, 86);
+    font-family: "Pacifico", cursive;
+    font-size: larger;
+    line-height: 16px;
+    margin-top: 40px;
+  }
+
+  .companyDatas-full-section-h1-name{
+    display: none;
+  }
+
+  .companyDatas-full-section-h1-name-text{
+    font-size: 13px;
+  }
+}

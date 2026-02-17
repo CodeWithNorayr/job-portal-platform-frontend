@@ -1,0 +1,78 @@
+.user-profile-section{
+  font-family: "Pacifico", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-profile-form{
+  font-family: "Pacifico", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile-uploader{
+  width: 200px;
+  height: 200px;
+  border: 0.5px solid rgb(87, 87, 87);
+  border-radius: 100px;
+}
+
+.user-profile-uploader-p{
+  font-family: "Pacifico", cursive;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(79, 78, 77);
+  text-align: center;
+}
+
+.user-profile-uploader-h1{
+  font-family: "Pacifico", cursive;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(79, 78, 77);
+}
+
+.user-profile-uploader-p-cv-image{
+  width: 40px;
+  height: 40px;
+}
+
+.cv-uploader-user{
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.user-profile-uploader-button{
+  border: 0px solid blue;
+  border-radius: 20px;
+  background-color: rgb(60, 218, 165);
+  width: 100px;
+  height: 40px;
+  font-family: "Pacifico", cursive;
+  color: antiquewhite;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.user-profile-uploader-button:hover{
+  background-color: rgb(81, 227, 227);
+}
+
+.user-profile-uploader-p-cv-image:hover{
+  background-color: rgb(223, 230, 230);
+}
+
+.user-profile-uploader-input{
+  width: 300px;
+  height: 30px;
+  font-family: "Pacifico", cursive;
+  font-size: large;
+  color: rgb(123, 121, 119);
+}

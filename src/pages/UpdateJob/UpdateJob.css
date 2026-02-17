@@ -1,0 +1,48 @@
+.update-job-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: "Pacifico", cursive;
+  font-size: larger;
+  color: rgb(93, 91, 90);
+}
+
+.update-job-form-input{
+  width: 300px;
+  height: 30px;
+  font-family: "Pacifico", cursive;
+  font-size: larger;
+  color: rgb(93, 91, 90);
+}
+
+.update-job-form-input-textarea{
+  width: 300px;
+  height: 200px;
+  font-family: "Pacifico", cursive;
+  font-size: larger;
+  color: rgb(93, 91, 90);
+}
+
+.update-job-form-button-btn-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.update-job-form-button-btn{
+  width: 120px;
+  height: 40px;
+  font-family: "Pacifico", cursive;
+  font-size: large;
+  color: rgb(255, 255, 255);
+  background-color: cyan;
+  border: 0px solid blue;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.update-job-form-button-btn:hover{
+  background-color: rgb(32, 254, 254);
+}

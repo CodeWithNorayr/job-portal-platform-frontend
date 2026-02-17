@@ -1,0 +1,70 @@
+.form-submit-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.form-submit-section-all{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  margin-top: 20px;
+  font-family: "Pacifico", cursive;
+  color: rgb(141, 139, 139);
+  font-size: larger;
+}
+
+.form-submit-section-image-uploader-img{
+  width: 300px;
+  height: 200px;
+  border: 0px solid cyan;
+  border-radius: 100px;
+}
+
+.name-sec-content-input{
+  width: 300px;
+  height: 30px;
+  font-family: "Pacifico", cursive;
+  color: rgb(176, 174, 172);
+  font-size: larger;
+}
+
+.password-sec-content-input{
+  width: 300px;
+  height: 30px;
+  font-family: "Pacifico", cursive;
+  color: rgb(166, 164, 162);
+  font-size: larger;
+}
+
+.button-btn-sect{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Pacifico", cursive;
+  color: antiquewhite;
+  font-size: larger;
+}
+
+.button-btn-sect-submit{
+  width: 100px;
+  height: 50px;
+  border: 0px solid cyan;
+  background-color: cyan;
+  border-radius: 20px;
+  font-family: "Pacifico", cursive;
+  color: antiquewhite;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.button-btn-sect-submit:hover{
+  background-color: rgb(63, 252, 252);
+}

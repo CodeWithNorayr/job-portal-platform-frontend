@@ -1,0 +1,72 @@
+/* =============================== */
+/* IMAGE CONTAINER */
+/* =============================== */
+
+.interim-images-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+
+  flex-wrap: wrap; /* ✅ allows stacking on small screens */
+  box-sizing: border-box;
+  width: 300px;
+}
+
+/* =============================== */
+/* IMAGES (DEFAULT DESKTOP) */
+/* =============================== */
+
+.interim-images-section-1,
+.interim-images-section-2 {
+  width: 100%;
+  max-width: 280px; /* ✅ compact size */
+  height: auto;     /* ✅ keeps proportions */
+
+  object-fit: contain;
+  border-radius: 14px;
+
+  transition: 0.3s ease;
+}
+
+/* =============================== */
+/* TABLET SIZE */
+/* =============================== */
+
+@media (max-width: 900px) {
+  .interim-images-section-1,
+  .interim-images-section-2 {
+    width: 100px;
+  }
+}
+
+/* =============================== */
+/* MOBILE SIZE */
+/* =============================== */
+
+@media (max-width: 600px) {
+  .interim-images-wrapper {
+    flex-direction: column; /* ✅ stack vertically */
+    gap: 15px;
+  }
+
+  .interim-images-section-1,
+  .interim-images-section-2 {
+    width: 50px;
+  }
+}
+
+/* =============================== */
+/* EXTRA SMALL PHONES */
+/* =============================== */
+
+@media (max-width: 400px) {
+  .interim-images-section-1,
+  .interim-images-section-2 {
+    max-width: 110px;
+  }
+}

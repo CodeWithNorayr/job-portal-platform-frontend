@@ -1,0 +1,105 @@
+.update-userProfile-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-family: "Pacifico", cursive;
+  font-size: larger;
+  color: rgb(93, 91, 90);
+}
+
+
+.update-userProfile-section-image-img-h3{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.update-userProfile-section-image-name{
+  display: flex;
+}
+
+.update-userProfile-section-image-password-context{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.update-userProfile-section-image-img{
+  width: 300px;
+  height: 250px;
+}
+
+.update-userProfile-section-image-name{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.update-userProfile-section-image-name{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.update-userProfile-section-image-name-input{
+  width: 300px;
+  height: 30px;
+  font-family: "Pacifico", cursive;
+  font-size: larger;
+  color: rgb(93, 91, 90);
+}
+
+.update-userProfile-section-image-password-input{
+  width: 300px;
+  height: 30px;
+  font-family: "Pacifico", cursive;
+  font-size: larger;
+  color: rgb(93, 91, 90);
+}
+
+.update-userProfile-section-image-resume-context-img{
+  width: 40px;
+  height: 40px;
+}
+
+.update-userProfile-section-image-resume-context-img:hover{
+  width: 42px;
+  height: 42px;
+  background-color: rgb(221, 237, 243);
+}
+
+.update-userProfile-section-image-resume-context{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+}
+
+
+.update-userProfile-section-image-resume-context-btn{
+  display: flex;
+  width: 100px;
+  height: 40px;
+  border: 0px solid blue;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(80, 230, 230);
+  justify-content: center;
+  text-align: center;
+}
+
+.update-userProfile-section-image-resume-context-btn-full{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.update-userProfile-section-image-resume-context-btn:hover{
+  background-color: rgb(74, 218, 218);
+}
