@@ -1,26 +1,67 @@
-.interim-images-section{
+/* ===============================
+   IMAGE SECTION WRAPPER
+================================= */
+
+.interim-images-section {
+  width: 100%;
+
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 40px;
+  align-items: center;
+  gap: 30px;
+
+  flex-wrap: wrap; /* ✅ allows stacking */
+  padding: 20px;
 }
 
-.interim-images-section-1{
-  width: 300px;
-  height: 300px;
+/* ===============================
+   IMAGE STYLE (BOTH IMAGES)
+================================= */
+
+.interim-images-section-1,
+.interim-images-section-2 {
+  width: 100%;
+  max-width: 280px; /* ✅ responsive limit */
+  height: auto; /* ✅ keeps aspect ratio */
+
+  border-radius: 15px;
+  object-fit: cover;
+
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.interim-images-section-1:hover{
-  width: 303px;
-  height: 303px;
+/* ✅ Hover Effect (No Layout Jump) */
+.interim-images-section-1:hover,
+.interim-images-section-2:hover {
+  transform: scale(1.05);
 }
 
-.interim-images-section-2{
-  width: 300px;
-  height: 300px;
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* ✅ Tablets */
+@media (max-width: 900px) {
+  .interim-images-section {
+    gap: 20px;
+  }
+
+  .interim-images-section-1,
+  .interim-images-section-2 {
+    max-width: 220px;
+  }
 }
 
-.interim-images-section-2:hover{
-  width: 303px;
-  height: 303px;
+/* ✅ Mobile Phones */
+@media (max-width: 600px) {
+  .interim-images-section {
+    flex-direction: column; /* ✅ stack images */
+    gap: 15px;
+  }
+
+  .interim-images-section-1,
+  .interim-images-section-2 {
+    max-width: 90%;
+  }
 }
