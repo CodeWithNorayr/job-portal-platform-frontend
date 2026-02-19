@@ -1,61 +1,86 @@
-.manage-jobs-tabel-grid{
+/* ===============================
+   MANAGE JOBS TABLE GRID
+================================= */
+.manage-jobs-tabel-grid {
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-columns: repeat(6, 1fr);
   text-align: center;
   gap: 10px;
   font-family: "Pacifico", cursive;
-  font-size: larger;
+  font-size: 1rem;
   color: rgb(93, 91, 90);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.manage-jobs-tabel-grid-p{
+.manage-jobs-tabel-grid-p {
   cursor: pointer;
 }
 
-.assets-delete-icon{
+.assets-delete-icon {
   width: 60px;
   height: 60px;
   cursor: pointer;
   border: 0px solid blue;
   border-radius: 20px;
+  transition: 0.3s ease;
 }
 
-.assets-delete-icon:hover{
+.assets-delete-icon:hover {
   background-color: rgb(209, 227, 222);
 }
 
-@media (max-width:850px) {
-  .manage-jobs-tabel-grid{
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr;
-    text-align: center;
-    gap: 10px;
-    font-family: "Pacifico", cursive;
-    font-size: larger;
-    color: rgb(93, 91, 90);
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* Tablets / small screens */
+@media (max-width: 850px) {
+  .manage-jobs-tabel-grid {
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 0.95rem;
+    gap: 8px;
   }
 
-  .manage-jobs-tabel-grid-header-data{
+  .manage-jobs-tabel-grid-header-data,
+  .manage-jobs-tabel-grid-header-location,
+  .manage-jobs-tabel-grid-header-salary,
+  .manage-jobs-tabel-grid-p-location,
+  .manage-jobs-tabel-grid-salary,
+  .manage-jobs-tabel-grid-date {
     display: none;
   }
 
-  .manage-jobs-tabel-grid-header-location{
-    display: none;
+  .assets-delete-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .manage-jobs-tabel-grid {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 0.9rem;
+    gap: 6px;
   }
 
-  .manage-jobs-tabel-grid-header-salary{
-    display: none;
+  .assets-delete-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .manage-jobs-tabel-grid {
+    grid-template-columns: 1fr;
+    font-size: 0.85rem;
+    gap: 5px;
   }
 
-  .manage-jobs-tabel-grid-p-location{
-    display: none;
-  }
-
-  .manage-jobs-tabel-grid-salary{
-    display: none;
-  }
-
-  .manage-jobs-tabel-grid-date{
-    display: none;
+  .assets-delete-icon {
+    width: 40px;
+    height: 40px;
   }
 }
