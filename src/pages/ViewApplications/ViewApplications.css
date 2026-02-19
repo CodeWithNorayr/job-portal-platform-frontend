@@ -10,6 +10,8 @@
   text-align: center;
   margin: 20px 0;
   font-size: 26px;
+  font-family: "Pacifico", cursive;
+  color: rgb(93, 91, 90);
 }
 
 .applications-list {
@@ -25,6 +27,11 @@
   line-height: 1.6;
   font-size: 15px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.application-card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .resume-section {
@@ -32,6 +39,7 @@
   align-items: center;
   gap: 10px;
   margin-top: 12px;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
 .resume-icon {
@@ -39,14 +47,22 @@
   height: 30px;
   object-fit: contain;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.resume-icon:hover {
+  transform: scale(1.1);
 }
 
 .resume-file {
   font-size: 13px;
   color: gray;
+  word-break: break-word; /* Prevent overflow on small screens */
 }
 
-/* ✅ Mobile Responsive */
+/* ===============================
+   MOBILE PHONES
+================================= */
 @media (max-width: 600px) {
   .application-card {
     font-size: 14px;
@@ -60,5 +76,52 @@
   .resume-section {
     flex-direction: column;
     align-items: flex-start;
+    gap: 8px;
+  }
+
+  .resume-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .resume-file {
+    font-size: 12px;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL PHONES
+================================= */
+@media (max-width: 400px) {
+  .application-card {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .view-applications-title {
+    font-size: 18px;
+  }
+
+  .resume-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .resume-file {
+    font-size: 11px;
+  }
+}
+
+/* ===============================
+   TABLET SCREENS
+================================= */
+@media (max-width: 860px) {
+  .application-card {
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+
+  .view-applications-title {
+    font-size: 22px;
   }
 }
