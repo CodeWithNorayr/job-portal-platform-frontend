@@ -1,48 +1,112 @@
-.Profile-page-section{
+/* ===============================
+   PROFILE PAGE SECTION
+================================= */
+.Profile-page-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
   font-family: "Pacifico", cursive;
   color: rgb(107, 107, 106);
-  font-size: larger;
+  font-size: 1.2rem;
   margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.Profile-page-section-image-img-button-upload{
-  width: 100px;
+.Profile-page-section-image-img-button {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* ✅ ensures buttons wrap on small screens */
+}
+
+/* ===============================
+   UPLOAD BUTTON
+================================= */
+.Profile-page-section-image-img-button-upload {
+  width: 120px;
   height: 40px;
   border: 0px solid blue;
   border-radius: 20px;
   background-color: cyan;
   color: antiquewhite;
   font-family: "Pacifico", cursive;
-  font-size: larger;
+  font-size: 1rem;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.Profile-page-section-image-img-button-upload:hover{
+.Profile-page-section-image-img-button-upload:hover {
   background-color: rgb(40, 231, 231);
 }
 
-.Profile-page-section-image-img-button-delete{
-  width: 100px;
+/* ===============================
+   DELETE BUTTON
+================================= */
+.Profile-page-section-image-img-button-delete {
+  width: 120px;
   height: 40px;
   border: 0px solid blue;
   border-radius: 20px;
   background-color: rgb(212, 86, 101);
   color: rgb(248, 244, 244);
   font-family: "Pacifico", cursive;
-  font-size: larger;
+  font-size: 1rem;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.Profile-page-section-image-img-button-delete:hover{
+.Profile-page-section-image-img-button-delete:hover {
   background-color: rgb(210, 75, 91);
 }
 
-.Profile-page-section-image-img-button{
-  display: flex;
-  gap: 20px;
-  align-items: center;
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* Tablets / small screens */
+@media (max-width: 900px) {
+  .Profile-page-section {
+    font-size: 1rem;
+    gap: 15px;
+  }
+
+  .Profile-page-section-image-img-button-upload,
+  .Profile-page-section-image-img-button-delete {
+    width: 100px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .Profile-page-section {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .Profile-page-section-image-img-button-upload,
+  .Profile-page-section-image-img-button-delete {
+    width: 90px;
+    height: 35px;
+    font-size: 0.85rem;
+  }
+
+  .Profile-page-section-image-img-button {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .Profile-page-section-image-img-button-upload,
+  .Profile-page-section-image-img-button-delete {
+    width: 80px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
 }
