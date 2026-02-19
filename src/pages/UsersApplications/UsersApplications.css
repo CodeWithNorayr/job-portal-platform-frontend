@@ -1,57 +1,121 @@
-.application-section-details{
+.application-section-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
+  gap: 40px; /* reduced from 80px for better mobile spacing */
   justify-content: center;
   margin-top: 30px;
   font-family: "Pacifico", cursive;
   font-size: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
-.application-section-details-div{
+.application-section-details-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
   text-align: center;
+  width: 100%;
+  max-width: 400px;
 }
 
-.cvUploader-cs{
-  box-shadow: 0px 0px 2px 2px rgb(55, 2, 2);
+.application-section-details-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 100px;
+  border: 0px solid tomato;
+  box-shadow: 0px 0px 2px 2px rgb(36, 3, 3);
+  transition: all 0.3s ease;
+  object-fit: cover;
 }
 
-.cvUploader-cs:hover{
+.application-section-details-image:hover {
+  background-color: rgb(102, 142, 142);
+  width: 302px;
+  height: 302px;
   box-shadow: 0px 0px 4px 4px rgb(42, 3, 3);
 }
 
-.application-section-details-image{
-  width: 300px;
-  height: 300px;
-  box-shadow: 0px 0px 2px 2px rgb(36, 3, 3);
-}
-
-.application-section-details-h333-h3{
+.application-section-details-h333-h3 {
   font-family: "Pacifico", cursive;
   font-size: 20px;
   color: rgb(0, 48, 48);
 }
 
-.application-section-details-image{
-  width: 300px;
-  height: 300px;
-  border: 0px solid tomato;
-  border-radius: 100px;
-}
-
-.application-section-details-image:hover{
-  background-color: rgb(102, 142, 142);
-  width: 302px;
-  height: 302px;
-}
-
-.cvUploader-cs{
+/* CV uploader small image */
+.cvUploader-cs {
   width: 50px;
   height: 50px;
+  box-shadow: 0px 0px 2px 2px rgb(55, 2, 2);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cvUploader-cs:hover {
+  box-shadow: 0px 0px 4px 4px rgb(42, 3, 3);
+}
+
+/* ===============================
+   TABLETS / MEDIUM SCREENS
+================================= */
+@media (max-width: 860px) {
+  .application-section-details-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .application-section-details-h333-h3 {
+    font-size: 18px;
+  }
+
+  .cvUploader-cs {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ===============================
+   MOBILE PHONES
+================================= */
+@media (max-width: 600px) {
+  .application-section-details {
+    gap: 30px;
+  }
+
+  .application-section-details-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .application-section-details-h333-h3 {
+    font-size: 16px;
+  }
+
+  .cvUploader-cs {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL PHONES
+================================= */
+@media (max-width: 400px) {
+  .application-section-details-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .application-section-details-h333-h3 {
+    font-size: 14px;
+  }
+
+  .cvUploader-cs {
+    width: 30px;
+    height: 30px;
+  }
 }
