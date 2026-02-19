@@ -1,63 +1,113 @@
-.employers-section-context-h1{
-  font-family: "Pacifico", cursive;
-  font-size: 24px;
-  color: rgb(93, 91, 90);
-}
+/* ===============================
+   SECTION TITLE
+================================= */
 
-.employers-section-context-h1-div{
+.employers-section-context-h1-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+
+  margin: 15px 0;
 }
 
-.recruiter-section-full-div{
-  display: grid;
-  grid-template-columns: 0.5fr 0.5fr 0.5fr;
-  align-items: center;
-  justify-content: center;
+.employers-section-context-h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
+  color: rgb(93, 91, 90);
+
   text-align: center;
-  gap: 10px;
 }
 
-.recruiter-section-full-div-h3-name{
+/* ===============================
+   RECRUITER GRID CONTAINER
+================================= */
+
+.recruiter-section-full-div {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+/* ===============================
+   TEXT STYLES
+================================= */
+
+.recruiter-section-full-div-h3-name,
+.recruiter-section-full-div-h3-email {
   font-family: "Pacifico", cursive;
-  font-size: 24px;
+  font-size: 20px;
   color: rgb(93, 91, 90);
+
+  word-break: break-word;
 }
 
-.recruiter-section-full-div-h3-email{
-  font-family: "Pacifico", cursive;
-  font-size: 24px;
-  color: rgb(93, 91, 90);
+/* ===============================
+   RECRUITER IMAGE
+================================= */
+
+.recruiter-section-full-div-image {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+
+  border-radius: 15px;
+  object-fit: cover;
+
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
 }
 
-.recruiter-section-full-div-image{
-  width: 300px;
-  height: 300px;
-  box-shadow: 0px 0px 2px 2px red;
+.recruiter-section-full-div-image:hover {
+  transform: scale(1.03);
 }
 
-@media (max-width:1044px) {
-  .recruiter-section-full-div{
-    display: grid;
-    grid-template-columns: 0.2fr 0.2fr 0.2fr;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
-    width: 100%;
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* ✅ Tablets (2 Columns) */
+@media (max-width: 1000px) {
+  .recruiter-section-full-div {
+    grid-template-columns: repeat(2, 1fr);
   }
 
- .recruiter-section-full-div-image{
-  width: 100px;
-  height: 100px;
- }
+  .recruiter-section-full-div-h3-name,
+  .recruiter-section-full-div-h3-email {
+    font-size: 18px;
+  }
+
+  .recruiter-section-full-div-image {
+    max-width: 180px;
+  }
 }
 
-@media (max-width:584px) {
-  .recruiter-section-full-div-h3-email{
-    display: none;
+/* ✅ Mobile Phones (1 Column Stack) */
+@media (max-width: 600px) {
+  .recruiter-section-full-div {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .recruiter-section-full-div-h3-name {
+    font-size: 18px;
+  }
+
+  .recruiter-section-full-div-h3-email {
+    font-size: 16px;
+    opacity: 0.85;
+  }
+
+  .recruiter-section-full-div-image {
+    max-width: 160px;
+    margin: 0 auto;
   }
 }
