@@ -1,148 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Outfit:wght@100..900&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
-.navbar-section{
-  display: flex;
-  align-items: center;
-  gap: 20px;
+/* ===============================
+   GLOBAL RESET
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   NAVBAR MAIN CONTAINER
+================================= */
+.navbar-section {
+  width: 100%;
   background-color: rgb(30, 30, 30);
-  justify-content: center;
-}
 
-.navbar-section-cornelpart{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.navbar-left-side{
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  margin-left: 20px;
-}
-
-.navbar-image{
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  background-color: aliceblue;
-}
-
-.navbar-left-side-h1{
-  display: flex;
-  font-family: "Pacifico", cursive;
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-}
-
-.navbar-left-side-h1:hover{
-  color: rgb(176, 170, 170);
-}
-
-.navbar-medium-side{
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  padding: 15px 30px;
+  gap: 20px;
 }
 
-.navbar-medium-side li{
+/* ===============================
+   LEFT SIDE (LOGO + TITLE)
+================================= */
+.navbar-left-side {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-image {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: aliceblue;
+}
+
+.navbar-left-side-h1 {
   font-family: "Pacifico", cursive;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar-left-side-h1:hover {
+  color: rgb(176, 170, 170);
+}
+
+/* ===============================
+   MIDDLE NAV LINKS
+================================= */
+.navbar-medium-side {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar-medium-side li {
   list-style: none;
-  font-weight: 100;
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  font-weight: 300;
   cursor: pointer;
-  font-size: 26px;
-  color: rgb(255, 255, 255);
+  color: white;
+  transition: 0.3s;
 }
 
-.navbar-medium-side li:hover{
+.navbar-medium-side li:hover {
   color: rgb(219, 213, 213);
 }
 
+/* ===============================
+   RIGHT SIDE BUTTONS
+================================= */
+.navbar-right-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-.navbar-right-btn-login{
+.navbar-right-btn-login {
+  background: transparent;
+  border: none;
+  font-family: "Pacifico", cursive;
+  font-size: 18px;
+  cursor: pointer;
   color: antiquewhite;
-  background-color: rgb(30, 30, 30);
-  border: 0px;
-  font-family: "Pacifico", cursive;
-  width: 100px;
-  height: 30px;
-  font-size: large;
-  cursor: pointer;
+  transition: 0.3s;
 }
 
-.navbar-right-btn-login:hover{
+.navbar-right-btn-login:hover {
   color: rgb(219, 213, 213);
 }
 
-.navbar-right-btn-register{
-  color:antiquewhite;
+.navbar-right-btn-register {
   background-color: rgb(80, 243, 229);
-  width: 100px;
-  height: 40px;
-  border: 0px solid rgb(192, 192, 210);
-  border-radius: 20px;
+  border: none;
+  border-radius: 25px;
+
+  padding: 10px 22px;
   font-family: "Pacifico", cursive;
-  font-size: large;
+  font-size: 18px;
+
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.navbar-right-btn-register:hover{
+.navbar-right-btn-register:hover {
   background-color: rgb(63, 223, 210);
 }
 
-.navbar-context-section{
+/* ===============================
+   CONTEXT SECTION BELOW NAVBAR
+================================= */
+.navbar-context-section {
   background-color: rgb(30, 30, 30);
+  padding: 30px 10px;
 }
 
-.navbar-context{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: aliceblue;
+.navbar-context {
+  text-align: center;
+  color: white;
   font-family: "Pacifico", cursive;
-  font-size: 40px;
+  font-size: 36px;
 }
 
-@media (max-width: 860px) {
-  .navbar-section{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 2px;
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+
+/* ✅ Tablets */
+@media (max-width: 900px) {
+  .navbar-section {
     flex-direction: column;
-  }
-  .navbar-right-btn{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px;
+    gap: 15px;
   }
 
- 
-  .navbar-right-btn-login{
-    color: antiquewhite;
-    background-color: rgb(30, 30, 30);
-    border: 0px;
-    font-family: "Pacifico", cursive;
-    font-size: large;
-    cursor: pointer;
-  }
-  .navbar-isClicked-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .navbar-medium-side {
+    gap: 18px;
+    flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .navbar-medium-side li {
+    font-size: 18px;
+  }
+
+  .navbar-context {
+    font-size: 30px;
+  }
+}
+
+/* ✅ Mobile Phones */
+@media (max-width: 600px) {
+  .navbar-section {
+    padding: 15px;
+  }
+
+  .navbar-left-side-h1 {
+    font-size: 20px;
+  }
+
+  .navbar-medium-side {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar-medium-side li {
+    font-size: 17px;
+  }
+
+  .navbar-right-btn {
+    flex-direction: column;
+    width: 100%;
     gap: 10px;
   }
-  .navbar-section-cornelpart{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
+
+  .navbar-right-btn-login,
+  .navbar-right-btn-register {
+    width: 90%;
+    text-align: center;
+    font-size: 17px;
   }
 
+  .navbar-context {
+    font-size: 24px;
+  }
 }
