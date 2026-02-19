@@ -1,62 +1,107 @@
-.jobcard-section-container-side-cornel{
+/* ===============================
+   JOB CARD GRID CONTAINER
+================================= */
+.jobcard-section-container-side-cornel {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr); /* Desktop: 6 columns */
+
   align-items: center;
-  font-family: "Pacifico", cursive;
-  font-size: 13px;
-  font-weight: 500;
   justify-content: center;
   text-align: center;
+
+  font-family: "Pacifico", cursive;
+  font-size: 14px;
+  font-weight: 500;
+
+  gap: 15px; /* spacing between columns */
+  padding: 15px;
+}
+
+/* ===============================
+   JOB IMAGE
+================================= */
+.jobcard-section-container-img-side-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.jobcard-section-container-img-side-image:hover {
+  border: 1px solid rgb(165, 165, 171);
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* ✅ Large Tablets (3 columns) */
+@media (max-width: 1100px) {
+  .jobcard-section-container-side-cornel {
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 13px;
+  }
+}
+
+/* ✅ Small Tablets (2 columns) */
+@media (max-width: 800px) {
+  .jobcard-section-container-side-cornel {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 13px;
   }
 
-.jobcard-section-container-img-side-image{
-  width: 100px;
-  height: 100px;
+  .jobcard-section-container-img-side-image {
+    width: 80px;
+    height: 80px;
+  }
 }
 
-.jobcard-section-container-img-side-image:hover{
-  border: 1px solid rgb(165, 165, 171);
-  border-radius: 10px;
+/* ✅ Mobile Phones (1 column stacked layout) */
+@media (max-width: 500px) {
+  .jobcard-section-container-side-cornel {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 12px;
+
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .jobcard-section-container-img-side-image {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+  }
+
+  /* Hide extra columns for mobile */
+  .jobcard-section-container-context-1-side-level,
+  .jobcard-section-container-context-1-side-salary,
+  .jobcard-section-container-context-1-side-title {
+    display: none;
+  }
 }
 
-
-@media (max-width:500px) {
+/* ===============================
+   OPTIONAL: TABLE HEADER RESPONSIVE FIX
+================================= */
+@media (max-width: 500px) {
   .jobcard-section-container-tabel-headers {
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr;
-
+    grid-template-columns: repeat(3, 1fr);
 
     width: 100%;
+    font-size: 12px;
 
-    font-size: 13px;
-    /* ✅ compact text */
-    text-align: center;
-    align-items: center;
+    padding: 10px;
+    gap: 5px;
 
     border-radius: 10px;
     background: #ededed;
 
     overflow-x: auto;
-    /* ✅ scroll instead of overflow */
     text-align: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    gap: 2px;
-  }
 
-  .jobcard-section-container-context-1-side-level{
-    display: none;
-  }
-
-  .jobcard-section-container-context-1-side-salary{
-    display: none;
-  }
-
-  .jobcard-section-container-context-1-side-title{
-    display: none;
+    margin: 20px 0;
   }
 }
-
-
-
