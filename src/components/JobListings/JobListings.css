@@ -1,22 +1,19 @@
-/* =============================== */
-/* MAIN WRAPPER */
-/* =============================== */
-
+/* ===============================
+   MAIN WRAPPER
+================================= */
 .JobListings-context-section {
   width: 100%;
   display: flex;
   gap: 25px;
-
   padding: 20px;
   box-sizing: border-box;
-
-  overflow-x: hidden;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  justify-content: center;
 }
 
-/* =============================== */
-/* FILTER SIDEBAR */
-/* =============================== */
-
+/* ===============================
+   FILTER SIDEBAR
+================================= */
 .filtering-categories,
 .filtering-locations {
   display: flex;
@@ -33,13 +30,13 @@
   background: #f7f7f7;
 
   width: 200px;
+  max-width: 100%; /* prevent overflow */
   flex-shrink: 0;
 }
 
-/* =============================== */
-/* JOB LISTINGS SECTION */
-/* =============================== */
-
+/* ===============================
+   JOB LISTINGS SECTION
+================================= */
 .jobcard-section-parting {
   flex: 1;
   display: flex;
@@ -50,24 +47,21 @@
   overflow-x: hidden;
 }
 
-/* =============================== */
-/* TITLES */
-/* =============================== */
-
+/* ===============================
+   TITLES
+================================= */
 .filt-loc-sec-h3,
 .sectiooon-h1 {
   font-family: "Pacifico", cursive;
   font-size: 22px;
   font-weight: 500;
   color: rgb(79, 78, 77);
-
   text-align: center;
 }
 
-/* =============================== */
-/* FILTER ICONS */
-/* =============================== */
-
+/* ===============================
+   FILTER ICONS
+================================= */
 .filtering-categories-image-img,
 .filtering-location-image-img {
   width: 45px;
@@ -75,15 +69,13 @@
   object-fit: contain;
 }
 
-/* =============================== */
-/* TABLE HEADER CONTAINER */
-/* =============================== */
-
+/* ===============================
+   TABLE HEADER CONTAINER
+================================= */
 .jobcard-section-container-tabel-headers {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* flexible columns */
   padding: 12px;
   gap: 8px;
 
@@ -103,16 +95,14 @@
   height: 6px;
 }
 
-/* =============================== */
-/* PAGINATION */
-/* =============================== */
-
+/* ===============================
+   PAGINATION
+================================= */
 .job-listing-pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-
   margin-top: 15px;
   flex-wrap: wrap;
 }
@@ -129,15 +119,13 @@
 .active-page-123 {
   padding: 5px 10px;
   border-radius: 8px;
-
   border: 1px solid rgb(82, 80, 80);
   background-color: rgb(190, 190, 190);
 }
 
-/* =============================== */
-/* SEARCH TAGS */
-/* =============================== */
-
+/* ===============================
+   SEARCH TAGS
+================================= */
 .search-tags {
   display: flex;
   gap: 12px;
@@ -158,11 +146,11 @@
   height: 18px;
 }
 
-/* =============================== */
-/* ✅ RESPONSIVE BREAKPOINTS */
-/* =============================== */
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
 
-/* ✅ Tablets (Sidebar moves to top) */
+/* ✅ Tablets (900px and below) */
 @media (max-width: 900px) {
   .JobListings-context-section {
     flex-direction: column;
@@ -170,7 +158,7 @@
     gap: 20px;
   }
 
-  /* Filters become horizontal row */
+  /* Filters horizontal row */
   .JobListings-context-filtering-section {
     display: flex;
     gap: 15px;
@@ -185,42 +173,25 @@
     max-width: 350px;
   }
 
-  /* Table becomes scrollable */
   .jobcard-section-container-tabel-headers {
-    grid-template-columns: repeat(6, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
 
-/* ✅ Mobile Phones */
-@media (max-width: 500px) {
-  /* Filters stack vertically */
-  .JobListings-context-filtering-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
+/* ✅ Small Tablets / large phones (600px - 500px) */
+@media (max-width: 600px) {
   .filtering-categories,
   .filtering-locations {
     width: 95%;
-    max-width: none;
     padding: 12px;
   }
 
-  /* Table shows only important columns */
   .jobcard-section-container-tabel-headers {
     grid-template-columns: repeat(3, 1fr);
     font-size: 12px;
     gap: 5px;
   }
 
-  /* Hide extra table headers */
-  .jobcard-section-container-tabel-headers-level,
-  .jobcard-section-container-tabel-headers-title,
-  .jobcard-section-container-tabel-headers-salary {
-    display: none;
-  }
-
-  /* Pagination smaller */
   .job-listing-pagination {
     gap: 6px;
   }
@@ -230,5 +201,35 @@
   .job-listing-right-arrow {
     width: 18px;
     height: 18px;
+  }
+}
+
+/* ✅ Mobile Phones (below 500px) */
+@media (max-width: 500px) {
+  /* Filters vertical stack */
+  .JobListings-context-filtering-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filtering-categories,
+  .filtering-locations {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Table adjusts to mobile-friendly 3 columns */
+  .jobcard-section-container-tabel-headers {
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 12px;
+    gap: 5px;
+    padding: 8px;
+  }
+
+  /* Hide extra table headers for mobile */
+  .jobcard-section-container-tabel-headers-level,
+  .jobcard-section-container-tabel-headers-title,
+  .jobcard-section-container-tabel-headers-salary {
+    display: none;
   }
 }
