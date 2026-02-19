@@ -1,45 +1,127 @@
-.recruiter-dashboard-section-images{
+/* ===============================
+   RECRUITER DASHBOARD SECTION
+================================= */
+.recruiter-dashboard-section-images {
   display: flex;
   gap: 8px;
   align-items: center;
-  line-height: 2px;
+  line-height: 1.5;
+  flex-wrap: wrap; /* ✅ allows wrapping on small screens */
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.recruiter-dashboard-section-image-img{
+.recruiter-dashboard-section-images:hover {
+  background-color: rgb(232, 231, 231);
+  border-radius: 8px; /* ✅ smooth hover */
+  padding: 4px;
+}
+
+.recruiter-dashboard-section-image-img {
   width: 30px;
   height: 30px;
+  object-fit: cover;
 }
 
-.recruiter-dashboard-section-h3{
+/* TEXT HEADINGS */
+.recruiter-dashboard-section-h3 {
   font-family: "Pacifico", cursive;
-  font-size: 20px;
+  font-size: 1.2rem;
   cursor: pointer;
   color: rgb(27, 47, 71);
+  margin: 0;
 }
 
-.recruiter-dashboard-section-title-h1{
+.recruiter-dashboard-section-title-h1 {
   font-family: "Pacifico", cursive;
-  font-size: 30px;
+  font-size: 2rem;
   color: rgb(46, 70, 82);
   font-weight: 900;
   cursor: pointer;
+  margin: 0;
+  text-align: center;
 }
 
-.recruiter-dashboard-section-title-container-full{
-  position: absolute;
+/* CONTAINERS */
+.recruiter-dashboard-section-title-container-full {
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.recruiter-dashboard-section-images:hover{
-  background-color: rgb(232, 231, 231);
-}
-
-.recruiter-dashboard-section-title-container{
+.recruiter-dashboard-section-title-container {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   gap: 20px;
   margin-bottom: 50px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* Tablets / small screens */
+@media (max-width: 900px) {
+  .recruiter-dashboard-section-title-h1 {
+    font-size: 1.7rem;
+  }
+
+  .recruiter-dashboard-section-h3 {
+    font-size: 1rem;
+  }
+
+  .recruiter-dashboard-section-images {
+    gap: 6px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .recruiter-dashboard-section-title-h1 {
+    font-size: 1.5rem;
+  }
+
+  .recruiter-dashboard-section-h3 {
+    font-size: 0.9rem;
+  }
+
+  .recruiter-dashboard-section-images {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .recruiter-dashboard-section-image-img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .recruiter-dashboard-section-title-container {
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .recruiter-dashboard-section-title-h1 {
+    font-size: 1.3rem;
+  }
+
+  .recruiter-dashboard-section-h3 {
+    font-size: 0.8rem;
+  }
+
+  .recruiter-dashboard-section-image-img {
+    width: 20px;
+    height: 20px;
+  }
 }
