@@ -1,52 +1,87 @@
-.companyDatas-full-section{
+.companyDatas-full-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0px;
+  gap: 10px;
   color: rgb(86, 86, 86);
   font-family: "Pacifico", cursive;
   font-size: larger;
   line-height: 16px;
   margin-top: 40px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.companyDatas-full-section-image{
+.companyDatas-full-section-image {
   width: 300px;
   height: 300px;
   border: 1px solid rgb(19, 19, 69);
   border-radius: 100px;
+  object-fit: cover;
+  transition: 0.3s ease;
 }
 
-.companyDatas-full-section-image:hover{
+.companyDatas-full-section-image:hover {
   border: 2px solid rgb(16, 16, 62);
+  transform: scale(1.03);
 }
 
-.companyDatas-full-section-h1-title{
+.companyDatas-full-section-h1-title {
   color: rgb(9, 5, 45);
   font-family: "Pacifico", cursive;
   font-size: 30px;
+  word-break: break-word;
+  max-width: 90%;
 }
 
-@media (max-width:500px) {
-  .companyDatas-full-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0px;
-    color: rgb(86, 86, 86);
-    font-family: "Pacifico", cursive;
-    font-size: larger;
-    line-height: 16px;
-    margin-top: 40px;
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* Tablets / small screens */
+@media (max-width: 900px) {
+  .companyDatas-full-section-image {
+    width: 220px;
+    height: 220px;
   }
 
-  .companyDatas-full-section-h1-name{
+  .companyDatas-full-section-h1-title {
+    font-size: 24px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .companyDatas-full-section-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .companyDatas-full-section-h1-title {
+    font-size: 20px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .companyDatas-full-section-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .companyDatas-full-section-h1-title {
+    font-size: 16px;
+  }
+}
+
+/* Optional: Hide name on very small screens */
+@media (max-width: 500px) {
+  .companyDatas-full-section-h1-name {
     display: none;
   }
 
-  .companyDatas-full-section-h1-name-text{
+  .companyDatas-full-section-h1-name-text {
     font-size: 13px;
   }
 }
