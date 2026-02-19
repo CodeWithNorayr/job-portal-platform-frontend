@@ -1,4 +1,7 @@
-.form-submit-section{
+/* ===============================
+   FORM SUBMIT SECTION
+================================= */
+.form-submit-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,9 +9,11 @@
   text-align: center;
   gap: 20px;
   margin-top: 30px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.form-submit-section-all{
+.form-submit-section-all {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,40 +26,55 @@
   font-size: larger;
 }
 
-.form-submit-section-image-uploader-img{
+/* IMAGE UPLOADER */
+.form-submit-section-image-uploader-img {
   width: 300px;
   height: 200px;
   border: 0px solid cyan;
   border-radius: 100px;
+  object-fit: cover;
+  transition: 0.3s ease;
 }
 
-.name-sec-content-input{
+.form-submit-section-image-uploader-img:hover {
+  transform: scale(1.03);
+}
+
+/* INPUT FIELDS */
+.name-sec-content-input,
+.password-sec-content-input {
   width: 300px;
-  height: 30px;
+  max-width: 90%;
+  height: 35px;
   font-family: "Pacifico", cursive;
   color: rgb(176, 174, 172);
   font-size: larger;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(200, 200, 200);
+  box-sizing: border-box;
 }
 
-.password-sec-content-input{
-  width: 300px;
-  height: 30px;
-  font-family: "Pacifico", cursive;
-  color: rgb(166, 164, 162);
-  font-size: larger;
+.name-sec-content-input:focus,
+.password-sec-content-input:focus {
+  outline: none;
+  border: 1.5px solid cyan;
 }
 
-.button-btn-sect{
+/* BUTTON SECTION */
+.button-btn-sect {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Pacifico", cursive;
   color: antiquewhite;
   font-size: larger;
+  gap: 10px;
 }
 
-.button-btn-sect-submit{
+.button-btn-sect-submit {
   width: 100px;
+  max-width: 80%;
   height: 50px;
   border: 0px solid cyan;
   background-color: cyan;
@@ -63,8 +83,73 @@
   color: antiquewhite;
   font-size: larger;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.button-btn-sect-submit:hover{
+.button-btn-sect-submit:hover {
   background-color: rgb(63, 252, 252);
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* Tablets / small screens */
+@media (max-width: 900px) {
+  .form-submit-section-image-uploader-img {
+    width: 220px;
+    height: 160px;
+  }
+
+  .name-sec-content-input,
+  .password-sec-content-input {
+    width: 220px;
+    font-size: medium;
+  }
+
+  .button-btn-sect-submit {
+    width: 90px;
+    height: 45px;
+    font-size: medium;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .form-submit-section-image-uploader-img {
+    width: 160px;
+    height: 120px;
+  }
+
+  .name-sec-content-input,
+  .password-sec-content-input {
+    width: 160px;
+    font-size: small;
+  }
+
+  .button-btn-sect-submit {
+    width: 80px;
+    height: 40px;
+    font-size: small;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .form-submit-section-image-uploader-img {
+    width: 140px;
+    height: 100px;
+  }
+
+  .name-sec-content-input,
+  .password-sec-content-input {
+    width: 140px;
+    font-size: small;
+  }
+
+  .button-btn-sect-submit {
+    width: 70px;
+    height: 35px;
+    font-size: small;
+  }
 }
