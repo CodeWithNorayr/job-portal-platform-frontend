@@ -1,32 +1,95 @@
-.user-profile-login{
+/* ===============================
+   USER PROFILE LOGIN
+================================= */
+.user-profile-login {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   font-family: "Pacifico", cursive;
-  font-size: larger;
+  font-size: 1.2rem;
   color: rgb(93, 91, 90);
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.user-profile-uploader-button-login{
+/* ===============================
+   UPLOADER BUTTON
+================================= */
+.user-profile-uploader-button-login {
   border: 0px solid blue;
   border-radius: 20px;
   background-color: rgb(60, 218, 165);
-  width: 100px;
-  height: 40px;
+  width: 120px;
+  height: 45px;
   font-family: "Pacifico", cursive;
   color: antiquewhite;
-  font-size: larger;
+  font-size: 1rem;
   cursor: pointer;
   margin-top: 20px;
-}
-
-.user-profile-uploader-button-login:hover{
-  background-color: rgb(81, 227, 227);
-}
-
-.user-profile-uploader-button-login-hjk{
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s ease;
+}
+
+.user-profile-uploader-button-login:hover {
+  background-color: rgb(81, 227, 227);
+}
+
+/* ===============================
+   BUTTON INNER ALIGNMENT
+================================= */
+.user-profile-uploader-button-login-hjk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* Tablets / small screens */
+@media (max-width: 900px) {
+  .user-profile-login {
+    gap: 8px;
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+
+  .user-profile-uploader-button-login {
+    width: 100px;
+    height: 40px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .user-profile-login {
+    gap: 6px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .user-profile-uploader-button-login {
+    width: 90px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .user-profile-login {
+    gap: 5px;
+    font-size: 0.95rem;
+  }
+
+  .user-profile-uploader-button-login {
+    width: 80px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
 }
