@@ -1,4 +1,4 @@
-.update-job-form{
+.update-job-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,32 +6,38 @@
   font-family: "Pacifico", cursive;
   font-size: larger;
   color: rgb(93, 91, 90);
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.update-job-form-input{
-  width: 300px;
-  height: 30px;
+.update-job-form-input,
+.update-job-form-input-textarea {
+  width: 100%;
+  max-width: 300px;
   font-family: "Pacifico", cursive;
-  font-size: larger;
+  font-size: large;
   color: rgb(93, 91, 90);
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-.update-job-form-input-textarea{
-  width: 300px;
+.update-job-form-input-textarea {
   height: 200px;
-  font-family: "Pacifico", cursive;
-  font-size: larger;
-  color: rgb(93, 91, 90);
+  resize: vertical; /* allows resizing on larger screens */
 }
 
-.update-job-form-button-btn-div{
+.update-job-form-button-btn-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 
-.update-job-form-button-btn{
+.update-job-form-button-btn {
   width: 120px;
   height: 40px;
   font-family: "Pacifico", cursive;
@@ -41,8 +47,63 @@
   border: 0px solid blue;
   border-radius: 100px;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.update-job-form-button-btn:hover{
+.update-job-form-button-btn:hover {
   background-color: rgb(32, 254, 254);
+  transform: scale(1.05);
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* Tablets / small screens */
+@media (max-width: 900px) {
+  .update-job-form-input,
+  .update-job-form-input-textarea {
+    max-width: 250px;
+    font-size: medium;
+  }
+
+  .update-job-form-button-btn {
+    width: 100px;
+    height: 35px;
+    font-size: medium;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .update-job-form-input,
+  .update-job-form-input-textarea {
+    max-width: 200px;
+    font-size: small;
+  }
+
+  .update-job-form-button-btn {
+    width: 90px;
+    height: 32px;
+    font-size: small;
+  }
+
+  .update-job-form {
+    gap: 15px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .update-job-form-input,
+  .update-job-form-input-textarea {
+    max-width: 180px;
+    font-size: small;
+  }
+
+  .update-job-form-button-btn {
+    width: 80px;
+    height: 30px;
+    font-size: small;
+  }
 }
