@@ -2,20 +2,28 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .userdashboard-section-profile {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   background-color: gray;
   text-align: center;
-  margin-top: 30px;
+  padding: 15px;
+  border-radius: 10px;
+  flex-wrap: wrap; /* allows wrapping on small screens */
 }
 
 .userdashboard-section-profile-image-img {
-  width: 30px;
-  height: 10px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .userdashboard-section-profile-h3 {
@@ -23,19 +31,23 @@
   font-size: 20px;
   cursor: pointer;
   color: rgb(255, 255, 255);
+  margin: 0;
+  text-align: center;
 }
 
 .userdashboard-section-profile-update {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   background-color: rgb(210, 210, 210);
   text-align: center;
-  margin-top: 30px;
+  padding: 15px;
+  border-radius: 10px;
   font-family: "Pacifico", cursive;
   font-size: 20px;
   cursor: pointer;
   color: rgb(152, 152, 152);
+  flex-wrap: wrap; /* wrap for small screens */
 }
 
 .userdashboard-section-profile-update:hover {
@@ -45,6 +57,8 @@
 .userdashboard-section-profile-update-image {
   width: 60px;
   height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .userdashboard-section-profile-update-h3 {
@@ -52,14 +66,15 @@
   font-size: 20px;
   cursor: pointer;
   color: rgb(152, 152, 152);
+  margin: 0;
+  text-align: center;
 }
 
 .userdashboard-section-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  line-height: none;
-  height: 2px;
+  width: 100%;
 }
 
 .userdashboard-section-h1 {
@@ -70,25 +85,88 @@
   font-size: 40px;
   cursor: pointer;
   color: rgb(139, 137, 137);
-  margin-left: 300px;
-  margin-right: 300px;
+  margin: 20px 20px;
+  text-align: center;
 }
 
-@media (max-width:860px) {
-  .userdashboard-section-profile-update{
-    display: flex;
-    height: 80px;
-    font-family: "Pacifico", cursive;
-    font-size: 20px;
-    cursor: pointer;
-    color: rgb(139, 137, 137);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .userdashboard-section {
-    display: flex;
+/* ===============================
+   TABLETS / MEDIUM SCREENS
+================================= */
+@media (max-width: 860px) {
+  .userdashboard-section-profile,
+  .userdashboard-section-profile-update {
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .userdashboard-section-profile-h3,
+  .userdashboard-section-profile-update-h3 {
+    font-size: 18px;
+  }
+
+  .userdashboard-section-profile-update-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .userdashboard-section-h1 {
+    font-size: 32px;
+    margin: 15px;
+  }
+}
+
+/* ===============================
+   MOBILE PHONES
+================================= */
+@media (max-width: 600px) {
+  .userdashboard-section-profile,
+  .userdashboard-section-profile-update {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .userdashboard-section-profile-h3,
+  .userdashboard-section-profile-update-h3 {
+    font-size: 16px;
+  }
+
+  .userdashboard-section-profile-image-img,
+  .userdashboard-section-profile-update-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .userdashboard-section-h1 {
+    font-size: 24px;
+    margin: 10px;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL PHONES
+================================= */
+@media (max-width: 400px) {
+  .userdashboard-section-profile,
+  .userdashboard-section-profile-update {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .userdashboard-section-profile-h3,
+  .userdashboard-section-profile-update-h3 {
+    font-size: 14px;
+  }
+
+  .userdashboard-section-profile-image-img,
+  .userdashboard-section-profile-update-image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .userdashboard-section-h1 {
+    font-size: 20px;
+    margin: 5px;
   }
 }
