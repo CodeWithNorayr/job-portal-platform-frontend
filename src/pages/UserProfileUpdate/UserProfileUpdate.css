@@ -1,4 +1,4 @@
-.update-userProfile-section{
+.update-userProfile-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,100 +6,158 @@
   font-family: "Pacifico", cursive;
   font-size: larger;
   color: rgb(93, 91, 90);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
-
-.update-userProfile-section-image-img-h3{
+.update-userProfile-section-image-img-h3 {
   display: flex;
   align-items: center;
-  text-align: center;
   justify-content: center;
+  text-align: center;
 }
 
-.update-userProfile-section-image-name{
+.update-userProfile-section-image-name,
+.update-userProfile-section-image-password-context {
   display: flex;
-}
-
-.update-userProfile-section-image-password-context{
-  display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 350px;
 }
 
-.update-userProfile-section-image-img{
+.update-userProfile-section-image-img {
   width: 300px;
   height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.update-userProfile-section-image-name{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.update-userProfile-section-image-name{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.update-userProfile-section-image-name-input{
+.update-userProfile-section-image-name-input,
+.update-userProfile-section-image-password-input {
   width: 300px;
   height: 30px;
   font-family: "Pacifico", cursive;
   font-size: larger;
   color: rgb(93, 91, 90);
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(200, 200, 200);
 }
 
-.update-userProfile-section-image-password-input{
-  width: 300px;
-  height: 30px;
-  font-family: "Pacifico", cursive;
-  font-size: larger;
-  color: rgb(93, 91, 90);
+.update-userProfile-section-image-resume-context {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* wrap buttons/images on small screens */
 }
 
-.update-userProfile-section-image-resume-context-img{
+.update-userProfile-section-image-resume-context-img {
   width: 40px;
   height: 40px;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
-.update-userProfile-section-image-resume-context-img:hover{
+.update-userProfile-section-image-resume-context-img:hover {
   width: 42px;
   height: 42px;
   background-color: rgb(221, 237, 243);
+  border-radius: 5px;
 }
 
-.update-userProfile-section-image-resume-context{
+.update-userProfile-section-image-resume-context-btn,
+.update-userProfile-section-image-resume-context-btn-full {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  gap: 30px;
-}
-
-
-.update-userProfile-section-image-resume-context-btn{
-  display: flex;
   width: 100px;
   height: 40px;
   border: 0px solid blue;
   border-radius: 20px;
   color: rgb(255, 255, 255);
   font-family: "Pacifico", cursive;
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
   background-color: rgb(80, 230, 230);
-  justify-content: center;
-  text-align: center;
+  transition: 0.2s ease;
 }
 
-.update-userProfile-section-image-resume-context-btn-full{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.update-userProfile-section-image-resume-context-btn:hover{
+.update-userProfile-section-image-resume-context-btn:hover {
   background-color: rgb(74, 218, 218);
+}
+
+/* ===============================
+   TABLET / MEDIUM SCREENS
+================================= */
+@media (max-width: 860px) {
+  .update-userProfile-section-image-img {
+    width: 250px;
+    height: 200px;
+  }
+
+  .update-userProfile-section-image-name-input,
+  .update-userProfile-section-image-password-input {
+    width: 250px;
+  }
+
+  .update-userProfile-section-image-resume-context-btn {
+    width: 90px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .update-userProfile-section-image-resume-context {
+    gap: 15px;
+  }
+}
+
+/* ===============================
+   MOBILE PHONES
+================================= */
+@media (max-width: 600px) {
+  .update-userProfile-section-image-img {
+    width: 200px;
+    height: 160px;
+  }
+
+  .update-userProfile-section-image-name-input,
+  .update-userProfile-section-image-password-input {
+    width: 200px;
+  }
+
+  .update-userProfile-section-image-resume-context-btn {
+    width: 80px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .update-userProfile-section-image-resume-context {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL PHONES
+================================= */
+@media (max-width: 400px) {
+  .update-userProfile-section-image-img {
+    width: 150px;
+    height: 120px;
+  }
+
+  .update-userProfile-section-image-name-input,
+  .update-userProfile-section-image-password-input {
+    width: 150px;
+  }
+
+  .update-userProfile-section-image-resume-context-btn {
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
+  }
 }
