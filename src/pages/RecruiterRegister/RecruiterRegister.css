@@ -1,4 +1,7 @@
-.company-register-section{
+/* ===============================
+   COMPANY REGISTER SECTION
+================================= */
+.company-register-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,36 +9,75 @@
   font-family: "Pacifico", cursive;
   font-size: larger;
   color: rgb(93, 91, 90);
+  gap: 15px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.company-register-image-imgtag{
+/* IMAGE UPLOADER */
+.company-register-image-imgtag {
   width: 200px;
   height: 200px;
   border: 1px solid rgb(67, 67, 71);
   border-radius: 20px;
+  object-fit: cover;
+  transition: 0.3s ease;
 }
 
-.company-register-image-imgtag:hover{
+.company-register-image-imgtag:hover {
   border: 1.8px solid grey;
 }
 
-.company-register-image-p{
+/* IMAGE DESCRIPTION / TEXT */
+.company-register-image-p {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 5px;
 }
 
-.company-register-form{
+/* FORM */
+.company-register-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 350px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.company-register-button-btn{
+/* INPUT FIELDS */
+.company-register-name-input,
+.company-register-email-input,
+.company-register-password-input {
+  width: 260px;
+  max-width: 90%;
+  height: 35px;
+  padding: 5px 10px;
+  font-family: "Pacifico", cursive;
+  font-size: large;
+  color: rgb(93, 91, 90);
+  border-radius: 8px;
+  border: 1px solid rgb(200, 200, 200);
+  box-sizing: border-box;
+}
+
+.company-register-name-input:focus,
+.company-register-email-input:focus,
+.company-register-password-input:focus {
+  outline: none;
+  border: 1.5px solid rgb(65, 213, 173);
+}
+
+/* SUBMIT BUTTON */
+.company-register-button-btn {
   width: 100px;
+  max-width: 80%;
   height: 40px;
   cursor: pointer;
   background-color: rgb(65, 213, 173);
@@ -45,34 +87,81 @@
   font-family: "Pacifico", cursive;
   color: antiquewhite;
   font-size: large;
-  font-weight: 500px;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
-.company-register-button-btn:hover{
+.company-register-button-btn:hover {
   background-color: rgb(88, 192, 192);
 }
 
-.company-register-name-input{
-  width: 260px;
-  height: 30px;
-  font-family: "Pacifico", cursive;
-  font-size: large;
-  color: rgb(93, 91, 90);
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* Tablets / small screens */
+@media (max-width: 900px) {
+  .company-register-image-imgtag {
+    width: 150px;
+    height: 150px;
+  }
+
+  .company-register-name-input,
+  .company-register-email-input,
+  .company-register-password-input {
+    width: 220px;
+    font-size: medium;
+  }
+
+  .company-register-button-btn {
+    width: 90px;
+    font-size: medium;
+  }
 }
 
-.company-register-email-input{
-  width: 260px;
-  height: 30px;
-  font-family: "Pacifico", cursive;
-  font-size: large;
-  color: rgb(93, 91, 90);
+/* Mobile phones */
+@media (max-width: 600px) {
+  .company-register-image-imgtag {
+    width: 120px;
+    height: 120px;
+  }
+
+  .company-register-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .company-register-name-input,
+  .company-register-email-input,
+  .company-register-password-input {
+    width: 180px;
+    font-size: small;
+  }
+
+  .company-register-button-btn {
+    width: 80px;
+    height: 35px;
+    font-size: small;
+  }
 }
 
-.company-register-password-input{
-  width: 260px;
-  height: 30px;
-  font-family: "Pacifico", cursive;
-  font-size: large;
-  color: rgb(93, 91, 90);
-}
+/* Extra small phones */
+@media (max-width: 400px) {
+  .company-register-image-imgtag {
+    width: 100px;
+    height: 100px;
+  }
 
+  .company-register-name-input,
+  .company-register-email-input,
+  .company-register-password-input {
+    width: 150px;
+    font-size: small;
+  }
+
+  .company-register-button-btn {
+    width: 70px;
+    height: 30px;
+    font-size: small;
+  }
+}
