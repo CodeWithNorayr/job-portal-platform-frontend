@@ -1,101 +1,181 @@
-.add-job-container-section{
+/* ===============================
+   MAIN CONTAINER
+================================= */
+
+.add-job-container-section {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 30px auto;
+  padding: 20px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 20px;
 }
 
-.add-job-form{
+/* ===============================
+   FORM WRAPPER
+================================= */
+
+.add-job-form {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
-  line-height: normal;
-  align-items: center;
+  gap: 15px;
+
   font-family: "Pacifico", cursive;
-  font-size: larger;
+  font-size: 18px;
   color: rgb(93, 91, 90);
 }
 
-.add-job-title-input{
-  width: 300px;
-  height: 30px;
+/* ===============================
+   INPUTS (GLOBAL STYLE)
+================================= */
+
+.add-job-title-input,
+.add-location-input,
+.add-job-category-input,
+.add-job-level-input,
+.add-job-salary-input,
+.add-job-date-input {
+  width: 100%;
+  max-width: 500px;
+
+  height: 45px;
+  padding: 0 15px;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
   font-family: "Pacifico", cursive;
-  font-size: large;
+  font-size: 16px;
   color: rgb(93, 91, 90);
+
+  outline: none;
+  transition: 0.3s;
 }
 
-.add-location-input{
-  width: 300px;
-  height: 30px;
-  font-family: "Pacifico", cursive;
-  font-size: large;
-  color: rgb(93, 91, 90);
+/* Focus effect */
+.add-job-title-input:focus,
+.add-location-input:focus,
+.add-job-category-input:focus,
+.add-job-level-input:focus,
+.add-job-salary-input:focus,
+.add-job-date-input:focus {
+  border-color: rgb(56, 236, 209);
+  box-shadow: 0 0 6px rgba(56, 236, 209, 0.6);
 }
 
-.add-job-category-input{
-  width: 300px;
-  height: 30px;
+/* ===============================
+   DESCRIPTION TEXTAREA
+================================= */
+
+.add-job-description-input {
+  width: 100%;
+  max-width: 500px;
+
+  height: 160px;
+  padding: 12px 15px;
+
+  border: 1px solid #ccc;
+  border-radius: 12px;
+
   font-family: "Pacifico", cursive;
-  font-size: large;
+  font-size: 16px;
   color: rgb(93, 91, 90);
+
+  outline: none;
+  resize: vertical;
+
+  transition: 0.3s;
 }
 
-.add-job-level-input{
-  width: 300px;
-  height: 30px;
-  font-family: "Pacifico", cursive;
-  font-size: large;
-  color: rgb(93, 91, 90);
+.add-job-description-input:focus {
+  border-color: rgb(56, 236, 209);
+  box-shadow: 0 0 6px rgba(56, 236, 209, 0.6);
 }
 
-.add-job-salary-input{
-  width: 300px;
-  height: 30px;
-  font-family: "Pacifico", cursive;
-  font-size: large;
-  color: rgb(93, 91, 90);
-}
+/* ===============================
+   SUBMIT BUTTON
+================================= */
 
-.add-job-description-input{
-  width: 300px;
-  height: 300px;
-  font-family: "Pacifico", cursive;
-  font-size: large;
-  color: rgb(93, 91, 90);
-}
+.add-job-button-btn-ty {
+  width: 100%;
+  max-width: 220px;
 
-.add-job-date-input{
-  width: 300px;
-  height: 30px;
-  font-family: "Pacifico", cursive;
-  font-size: large;
-  color: rgb(93, 91, 90);
-}
+  height: 55px;
+  margin-top: 10px;
 
-.add-job-button-btn-ty{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
   font-family: "Pacifico", cursive;
-  font-size: large;
-  color: rgb(235, 241, 242);
+  font-size: 18px;
+  color: white;
+
   background-color: rgb(56, 236, 209);
-  border: 0px solid blue;
-  border-radius: 20px;
-  width: 100px;
-  height: 50px;
-  justify-content: center;
+  border: none;
+  border-radius: 30px;
+
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.add-job-button-btn-ty:hover{
+.add-job-button-btn-ty:hover {
   background-color: rgb(69, 207, 207);
+  transform: scale(1.03);
 }
 
-.add-job-title-main-h1{
+/* ===============================
+   TITLE
+================================= */
+
+.add-job-title-main-h1 {
   font-family: "Pacifico", cursive;
-  font-size: large;
+  font-size: 26px;
   color: rgb(60, 90, 85);
+
+  text-align: center;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* ✅ Tablets */
+@media (max-width: 768px) {
+  .add-job-container-section {
+    padding: 15px;
+  }
+
+  .add-job-title-main-h1 {
+    font-size: 22px;
+  }
+
+  .add-job-form {
+    font-size: 16px;
+  }
+}
+
+/* ✅ Mobile Phones */
+@media (max-width: 500px) {
+  .add-job-container-section {
+    padding: 12px;
+    gap: 15px;
+  }
+
+  .add-job-title-main-h1 {
+    font-size: 20px;
+  }
+
+  input,
+  textarea {
+    font-size: 15px;
+  }
+
+  .add-job-button-btn-ty {
+    width: 90%;
+    max-width: none;
+    font-size: 16px;
+  }
 }
