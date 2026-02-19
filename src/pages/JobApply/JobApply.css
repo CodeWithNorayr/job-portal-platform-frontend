@@ -1,102 +1,159 @@
-.jobapply-section{
+/* ===============================
+   MAIN SECTION
+================================= */
+.jobapply-section {
   display: flex;
   flex-direction: column;
   font-family: "Pacifico", cursive;
-  font-size: larger;
+  font-size: 1.2rem; /* scalable */
   color: rgb(93, 91, 90);
-}
-
-.jobapply-section-cornel-h2{
-  display: flex;
-  flex-basis: flex-start;
-  text-align: center;
-  font-family: "Pacifico", cursive;
-  font-size: larger;
-  color: rgb(93, 91, 90);
-}
-
-.jobapply-section-container-h1{
-  display: flex;
+  gap: 20px;
   align-items: center;
-  text-align: center;
-  justify-content: center;
-  font-family: "Pacifico", cursive;
-  font-size: 38px;
-  color: rgb(93, 91, 90);
-  margin-bottom: 20px;
-  margin-top: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.jobapply-section-cornel-btn-context{
+/* ===============================
+   SECTION HEADINGS
+================================= */
+.jobapply-section-cornel-h2 {
+  display: flex;
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(93, 91, 90);
+  justify-content: center;
+}
+
+.jobapply-section-container-h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-size: 2.4rem;
+  color: rgb(93, 91, 90);
+  margin: 20px 0;
   text-align: center;
 }
 
-.jobapply-section-cornel-btn{
+/* ===============================
+   BUTTONS
+================================= */
+.jobapply-section-cornel-btn-context {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* stack if screen too small */
+}
+
+.jobapply-section-cornel-btn {
   width: 120px;
   height: 50px;
-  border: 0px solid blue;
+  border: none;
   border-radius: 20px;
   background-color: rgb(88, 233, 204);
   color: antiquewhite;
   font-family: "Pacifico", cursive;
-  font-size: 20px;
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: 500px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.jobapply-section-cornel-btn:hover{
+.jobapply-section-cornel-btn:hover {
   background-color: rgb(65, 209, 209);
+  transform: scale(1.05);
 }
 
-@media (max-width:1340px) {
-  .jobapply-section{
-    display: flex;
-    flex-direction: column;
-    font-family: "Pacifico", cursive;
-    font-size: larger;
-    color: rgb(93, 91, 90);
-    gap: 20px;
+/* ===============================
+   COMPANY IMAGE / LOGO
+================================= */
+.jobapply-company-image-img,
+.jobapply-company {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  object-fit: contain;
+  margin: 20px 0;
+  border-radius: 20px;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* Large tablets / small desktops */
+@media (max-width: 1340px) {
+  .jobapply-company-image-img,
+  .jobapply-company {
+    width: 220px;
+    height: 220px;
   }
 
-  .jobapply-section-cornel-btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 120px;
-    height: 50px;
-    border: 0px solid blue;
-    border-radius: 20px;
-    background-color: rgb(88, 233, 204);
-    color: antiquewhite;
-    font-family: "Pacifico", cursive;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 500px;
+  .jobapply-section-container-h1 {
+    font-size: 2rem;
   }
 
-  .jobapply-company-image-img{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    justify-content: center;
-    text-align: center;
-    width: 300px;
-    height: 300px;
+  .jobapply-section-cornel-btn {
+    width: 100px;
+    height: 45px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets / medium screens */
+@media (max-width: 900px) {
+  .jobapply-company-image-img,
+  .jobapply-company {
+    width: 180px;
+    height: 180px;
   }
 
-  .jobapply-company{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    justify-content: center;
-    text-align: center;
-    width: 300px;
-    height: 300px;
+  .jobapply-section-container-h1 {
+    font-size: 1.8rem;
+  }
+
+  .jobapply-section-cornel-btn {
+    width: 90px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .jobapply-section {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .jobapply-company-image-img,
+  .jobapply-company {
+    width: 90%;
+    height: auto; /* keeps aspect ratio */
+  }
+
+  .jobapply-section-container-h1 {
+    font-size: 1.6rem;
+  }
+
+  .jobapply-section-cornel-btn {
+    width: 80%;
+    max-width: 200px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .jobapply-section-container-h1 {
+    font-size: 1.4rem;
+  }
+
+  .jobapply-section-cornel-btn {
+    width: 100%;
+    font-size: 0.85rem;
   }
 }
