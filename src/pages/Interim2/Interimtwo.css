@@ -1,6 +1,6 @@
-/* =============================== */
-/* IMAGE CONTAINER */
-/* =============================== */
+/* ===============================
+   IMAGE WRAPPER
+================================= */
 
 .interim-images-wrapper {
   display: flex;
@@ -9,44 +9,50 @@
   gap: 25px;
 
   width: 100%;
-  max-width: 100%;
+  max-width: 1100px;
   padding: 20px;
+  box-sizing: border-box;
 
   flex-wrap: wrap; /* ✅ allows stacking on small screens */
-  box-sizing: border-box;
-  width: 300px;
 }
 
-/* =============================== */
-/* IMAGES (DEFAULT DESKTOP) */
-/* =============================== */
+/* ===============================
+   IMAGES
+================================= */
 
 .interim-images-section-1,
 .interim-images-section-2 {
   width: 100%;
-  max-width: 280px; /* ✅ compact size */
-  height: auto;     /* ✅ keeps proportions */
+  max-width: 300px; /* ✅ desktop limit */
+  height: auto;
 
-  object-fit: contain;
-  border-radius: 14px;
+  object-fit: cover; /* better than contain for visual consistency */
+  border-radius: 15px;
 
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-/* =============================== */
-/* TABLET SIZE */
-/* =============================== */
+/* ✅ Hover effect */
+.interim-images-section-1:hover,
+.interim-images-section-2:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   TABLET SIZE
+================================= */
 
 @media (max-width: 900px) {
   .interim-images-section-1,
   .interim-images-section-2 {
-    width: 100px;
+    max-width: 220px;
   }
 }
 
-/* =============================== */
-/* MOBILE SIZE */
-/* =============================== */
+/* ===============================
+   MOBILE SIZE
+================================= */
 
 @media (max-width: 600px) {
   .interim-images-wrapper {
@@ -56,17 +62,17 @@
 
   .interim-images-section-1,
   .interim-images-section-2 {
-    width: 50px;
+    max-width: 90%; /* ✅ responsive width */
   }
 }
 
-/* =============================== */
-/* EXTRA SMALL PHONES */
-/* =============================== */
+/* ===============================
+   EXTRA SMALL PHONES
+================================= */
 
 @media (max-width: 400px) {
   .interim-images-section-1,
   .interim-images-section-2 {
-    max-width: 110px;
+    max-width: 100%;
   }
 }
