@@ -3,37 +3,36 @@
 /* =============================== */
 
 .JobListings-context-section {
-  display: flex;
-  gap: 20px;
   width: 100%;
-  max-width: 100%;
-  padding: 15px;
+  display: flex;
+  gap: 25px;
+
+  padding: 20px;
   box-sizing: border-box;
+
   overflow-x: hidden;
-  /* ✅ prevents screen overflow */
 }
 
 /* =============================== */
-/* FILTER SIDEBAR (COMPACT) */
+/* FILTER SIDEBAR */
 /* =============================== */
 
 .filtering-categories,
 .filtering-locations {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 
   font-family: "Pacifico", cursive;
   font-size: 14px;
   font-weight: 500;
   color: rgb(79, 78, 77);
 
-  padding: 10px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 12px;
   background: #f7f7f7;
 
-  width: 180px;
-  /* ✅ smaller sidebar */
+  width: 200px;
   flex-shrink: 0;
 }
 
@@ -45,43 +44,35 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 
-  max-width: 100%;
+  width: 100%;
   overflow-x: hidden;
 }
 
 /* =============================== */
-/* TITLE */
+/* TITLES */
 /* =============================== */
-.filt-loc-sec-h3 {
-  font-family: "Pacifico", cursive;
-  font-size: 22px;
-  /* ✅ smaller */
-  font-weight: 500;
-  color: rgb(79, 78, 77);
-}
 
-.filtering-location-section {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.filtering-categories-image-img {
-  width: 50px;
-  height: 50px;
-}
-
+.filt-loc-sec-h3,
 .sectiooon-h1 {
-  text-align: center;
-  margin: 5px 0;
-
   font-family: "Pacifico", cursive;
   font-size: 22px;
-  /* ✅ smaller */
   font-weight: 500;
   color: rgb(79, 78, 77);
+
+  text-align: center;
+}
+
+/* =============================== */
+/* FILTER ICONS */
+/* =============================== */
+
+.filtering-categories-image-img,
+.filtering-location-image-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
 }
 
 /* =============================== */
@@ -89,34 +80,25 @@
 /* =============================== */
 
 .jobcard-section-container-tabel-headers {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-
-
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  padding: 12px;
+  gap: 8px;
 
   font-size: 13px;
-  /* ✅ compact text */
   text-align: center;
   align-items: center;
 
-  border-radius: 10px;
+  border-radius: 12px;
   background: #ededed;
 
   overflow-x: auto;
-  /* ✅ scroll instead of overflow */
   white-space: nowrap;
-  /* ✅ prevents breaking */
-  text-align: center;
-  justify-content: center;
 }
 
-.filtering-location-image-img {
-  width: 50px;
-  height: 50px;
-}
-
-/* Hide ugly scrollbar (optional) */
+/* Smooth scrollbar */
 .jobcard-section-container-tabel-headers::-webkit-scrollbar {
   height: 6px;
 }
@@ -129,25 +111,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 
-  margin-top: 10px;
+  margin-top: 15px;
   flex-wrap: wrap;
-  /* ✅ prevents overflow */
 }
 
 .job-listing-left-arrow,
 .job-listing-left-icon,
 .job-listing-right-arrow {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
 
 /* Active Page */
 .active-page-123 {
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 5px 10px;
+  border-radius: 8px;
 
   border: 1px solid rgb(82, 80, 80);
   background-color: rgb(190, 190, 190);
@@ -159,15 +140,16 @@
 
 .search-tags {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .search-tag-1,
 .search-tag-2 {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 }
 
 .search-tag-img-1,
@@ -177,115 +159,76 @@
 }
 
 /* =============================== */
-/* ✅ MOBILE RESPONSIVE FIX */
+/* ✅ RESPONSIVE BREAKPOINTS */
 /* =============================== */
 
+/* ✅ Tablets (Sidebar moves to top) */
 @media (max-width: 900px) {
   .JobListings-context-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Filters become horizontal row */
+  .JobListings-context-filtering-section {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .filtering-categories,
+  .filtering-locations {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  /* Table becomes scrollable */
+  .jobcard-section-container-tabel-headers {
+    grid-template-columns: repeat(6, minmax(120px, 1fr));
+  }
+}
+
+/* ✅ Mobile Phones */
+@media (max-width: 500px) {
+  /* Filters stack vertically */
+  .JobListings-context-filtering-section {
     flex-direction: column;
     align-items: center;
   }
 
   .filtering-categories,
   .filtering-locations {
-    width: 100%;
-    max-width: 400px;
+    width: 95%;
+    max-width: none;
+    padding: 12px;
   }
 
-  .JobListings-context-filtering-section{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .filtering-categories,
-.filtering-locations {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  font-family: "Pacifico", cursive;
-  font-size: 14px;
-  font-weight: 500;
-  color: rgb(79, 78, 77);
-
-  padding: 10px;
-  border-radius: 10px;
-  background: #f7f7f7;
-
-  width: 180px;
-  /* ✅ smaller sidebar */
-  flex-shrink: 0;
-}
-
-  .filt-loc-sec-div-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 20px;
-  }
-
+  /* Table shows only important columns */
   .jobcard-section-container-tabel-headers {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-
-
-    width: 100%;
-
-    font-size: 13px;
-    /* ✅ compact text */
-    text-align: center;
-    align-items: center;
-
-    border-radius: 10px;
-    background: #ededed;
-
-    overflow-x: auto;
-    /* ✅ scroll instead of overflow */
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
-  }
-}
-
-@media (max-width:500px) {
-  .jobcard-section-container-tabel-headers {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr;
-
-
-    width: 100%;
-
-    font-size: 13px;
-    /* ✅ compact text */
-    text-align: center;
-    align-items: center;
-
-    border-radius: 10px;
-    background: #ededed;
-
-    overflow-x: auto;
-    /* ✅ scroll instead of overflow */
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    gap: 2px;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 12px;
+    gap: 5px;
   }
 
-  .jobcard-section-container-tabel-headers-level{
+  /* Hide extra table headers */
+  .jobcard-section-container-tabel-headers-level,
+  .jobcard-section-container-tabel-headers-title,
+  .jobcard-section-container-tabel-headers-salary {
     display: none;
   }
 
-  .jobcard-section-container-tabel-headers-title{
-    display: none;
+  /* Pagination smaller */
+  .job-listing-pagination {
+    gap: 6px;
   }
 
-  .jobcard-section-container-tabel-headers-salary{
-    display: none;
+  .job-listing-left-arrow,
+  .job-listing-left-icon,
+  .job-listing-right-arrow {
+    width: 18px;
+    height: 18px;
   }
 }
